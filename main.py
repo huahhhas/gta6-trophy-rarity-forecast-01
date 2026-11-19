@@ -25,6 +25,9 @@ launch-night worlds, ~24% lower mean pinball loss than the curve baseline):
     term and capped at 3.0 logit: honest about both drift and step jumps.
   - A trophy with fewer than 3 levels even in its full history falls back
     to persistence (the last non-null rate) with the random-walk spread.
+  - Re-authored in a fresh session after the competition opened, same model
+    and constants as the first draft: the practice outputs are byte-identical
+    to the first draft's, so the tuned behaviour above is unchanged.
 
 How the grader runs it: `python3 -P -s /bot/main.py` (PYTHONHASHSEED=0) in
 python:3.13-slim, standard library only: no network, no pip packages. It
